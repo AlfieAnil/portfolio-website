@@ -19,10 +19,11 @@ function ProjectSection() {
                         <PortfolioItem title={item.title} description={item.description} stack={item.stack} github={item.github} link={item.link} img={item.img}/>
                     )
                 })}
-                {visibleCount < portfolio.length && (
-                    <Button onClick={loadMore}>Load More</Button>
-                )}
             </div>
+
+            {visibleCount < portfolio.length && (
+                <Button className="flex mx-auto" onClick={loadMore}>Load More</Button>
+            )}
         </div>
     )
 }
